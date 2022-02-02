@@ -1,0 +1,132 @@
+
+###### WST S/N : Q111
+###### INSTRUMENT S/N : 2462622010027
+###### MANUAL FOCUS : fcmov 190
+###### POSITION 1
+######
+FILe:MKDIR workspace:acquisitions/2462622010027
+FILe:MKDIR workspace:acquisitions/2462622010027/Q111
+fcmov 190
+cam:gain 55
+apmov 0
+epion 99
+transoff
+drawclose
+emmov m1
+exmov x1
+wait 0.2
+capture 3,3 110 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P1_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
+wait 0.2
+exmov x2
+emmov m2
+wait 0.2
+capture 3,3 400 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P1_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
+wait 0.2
+exmov x3
+emmov m3
+wait 0.2
+capture 3,3 750 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P1_S01_T1_B3_M3_X3_E750_A0_G55.tiff False False
+wait 0.2
+######
+######  END OF POSITION 1 Q111
+######  PLEASE ROTATE FOR POSITION 2
+######
+drawopen
+transon 2
+WAIT 10
+
+######
+######  POSITION 2 
+######  O Batch Q111
+######
+fcmov 190
+cam:gain 55
+epion 99
+transoff
+drawclose
+exmov x3
+emmov m3
+wait 0.2
+capture 3,3 750 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P2_S01_T1_B3_M3_X3_E750_A0_G55.tiff False False
+wait 0.2
+exmov x2
+emmov m2
+wait 0.2
+capture 3,3 400 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P2_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
+wait 0.2
+exmov x1
+emmov m1
+wait 0.2
+capture 3,3 110 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P2_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
+wait 0.2
+######
+######  END OF POSITION 2 Q111
+######  PLEASE FLIP FOR POSITION 3
+######
+drawopen
+transon 2
+WAIT 10
+
+######
+######  POSITION 3
+######  O Batch Q111
+######
+fcmov 190
+cam:gain 55
+epion 99
+transoff
+drawclose
+exmov x1
+emmov m1
+wait 0.2
+capture 3,3 110 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P3_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
+wait 0.2
+exmov x2
+emmov m2
+wait 0.2
+capture 3,3 400 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P3_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
+waiT 0.2
+exmov x3
+emmov m3
+wait 0.2
+capture 3,3 750 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P3_S01_T1_B3_M3_X3_E750_A0_G55.tiff False False
+wait 0.2
+######
+######  END OF POSITION 3 Q111
+######  PLEASE ROTATE FOR POSITION 4
+######
+drawopen
+transon 2
+WAIT 10
+
+######
+######  POSITION 4
+######  O Batch Q111
+######
+fcmov 190
+cam:gain 55
+epion 99
+transoff
+drawclose
+exmov x3
+emmov m3
+wait 0.2
+capture 3,3 750 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P4_S01_T1_B3_M3_X3_E750_A0_G55.tiff False False
+wait 0.2
+exmov x2
+emmov m2
+wait 0.2
+capture 3,3 400 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P4_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
+wait 0.2
+exmov x1
+emmov m1
+wait 0.2
+capture 3,3 110 False None acquisitions:2462622010027/Q111/2462622010027_Q111_imagex1P4_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
+wait 0.2
+drawopen
+transon 2
+######
+######  END OF POSITION 4 Q111
+######  AWAITING FOR NEW WHITE SCREEN
+######
+
