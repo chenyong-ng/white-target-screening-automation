@@ -1,3 +1,10 @@
+$WST_Serial = P999
+$iBright_Serial = 2462622080002
+$fcmov_Value = "fcmov 150"
+
+$ch1_exp = 110
+$ch2_exp = 400
+$ch3_exp = 600
 
 ###### WST S/N : $WST_Serial
 ###### INSTRUMENT S/N : $iBright_Serial
