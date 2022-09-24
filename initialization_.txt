@@ -1,0 +1,25 @@
+
+putty.exe -ssh root@10.130.36.183 -pw *******
+
+clear
+telnet localhost 2323
+epion 99
+cam:gain 55
+emhome
+exhome
+transoff
+niroff
+epion 99
+WAIT 60
+drawopen
+transon 2
+quit
+
+
+
+clear
+telnet localhost 2323
+epioff
+drawclose
+transoff
+quit

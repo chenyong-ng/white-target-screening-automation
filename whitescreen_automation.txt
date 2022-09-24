@@ -1,12 +1,14 @@
 
-###### WST S/N : P920
-###### INSTRUMENT S/N : 2462622080002
-###### MANUAL FOCUS : fcmov 150
+clear
+telnet localhost 2323
+###### WST S/N : Q086
+###### INSTRUMENT S/N : 2462622080002  2>&1
+###### MANUAL FOCUS : fcmov 150      2>&1
 ###### POSITION 1
 ###### hor_new_code_4.7_gui with shade_20220220-V1
-
 FILe:MKDIR workspace:acquisitions/2462622080002
-FILe:MKDIR workspace:acquisitions/2462622080002/P920
+FILe:MKDIR workspace:acquisitions/2462622080002/Q086
+
 fcmov 150
 cam:gain 55
 apmov 0
@@ -14,27 +16,27 @@ epion 99
 transoff
 ######
 ######  POSITION 1
-######  P Batch P920
+######  P Batch Q086
 ######
 drawclose
 StatusLED_Acqu   
 emmov m1
 exmov x1
 wait 0.2
-capture 3,3 110 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P1_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
+capture 3,3 110 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P1_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
 wait 0.2
 exmov x2
 emmov m2
 wait 0.2
-capture 3,3 400 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P1_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
+capture 3,3 400 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P1_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
 wait 0.2
 exmov x3
 emmov m3
 wait 0.2
-capture 3,3 600 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P1_S01_T1_B3_M3_X3_E600_A0_G55.tiff False False
+capture 3,3 600 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P1_S01_T1_B3_M3_X3_E600_A0_G55.tiff False False
 wait 0.2
 ######
-######  END OF POSITION 1 P920
+######  END OF POSITION 1 Q086
 ######
 ######  PLEASE ROTATE FOR POSITION 2
 ######
@@ -43,7 +45,7 @@ transon 2
 WAIT 12
 
 FILe:MKDIR workspace:acquisitions/2462622080002
-FILe:MKDIR workspace:acquisitions/2462622080002/P920
+FILe:MKDIR workspace:acquisitions/2462622080002/Q086
 fcmov 150
 cam:gain 55
 apmov 0
@@ -51,26 +53,26 @@ epion 99
 transoff
 ######
 ######  POSITION 2 
-######  P Batch P920
+######  P Batch Q086
 ######
 drawclose
 exmov x3
 emmov m3
 wait 0.2
-capture 3,3 600 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P2_S01_T1_B3_M3_X3_E600_A0_G55.tiff False False
+capture 3,3 600 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P2_S01_T1_B3_M3_X3_E600_A0_G55.tiff False False
 wait 0.2
 exmov x2
 emmov m2
 wait 0.2
-capture 3,3 400 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P2_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
+capture 3,3 400 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P2_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
 wait 0.2
 exmov x1
 emmov m1
 wait 0.2
-capture 3,3 110 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P2_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
+capture 3,3 110 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P2_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
 wait 0.2
 ######
-######  END OF POSITION 2 P920
+######  END OF POSITION 2 Q086
 ######
 ######  PLEASE FLIP FOR POSITION 3
 ######
@@ -79,7 +81,7 @@ transon 2
 WAIT 12
 
 FILe:MKDIR workspace:acquisitions/2462622080002
-FILe:MKDIR workspace:acquisitions/2462622080002/P920
+FILe:MKDIR workspace:acquisitions/2462622080002/Q086
 fcmov 150
 cam:gain 55
 apmov 0
@@ -87,26 +89,26 @@ epion 99
 transoff
 ######
 ######  POSITION 3
-######  P Batch P920
+######  P Batch Q086
 ######
 drawclose
 exmov x1
 emmov m1
 wait 0.2
-capture 3,3 110 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P3_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
+capture 3,3 110 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P3_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
 wait 0.2
 exmov x2
 emmov m2
 wait 0.2
-capture 3,3 400 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P3_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
+capture 3,3 400 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P3_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
 waiT 0.2
 exmov x3
 emmov m3
 wait 0.2
-capture 3,3 600 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P3_S01_T1_B3_M3_X3_E600_A0_G55.tiff False False
+capture 3,3 600 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P3_S01_T1_B3_M3_X3_E600_A0_G55.tiff False False
 wait 0.2
 ######
-######  END OF POSITION 3 P920
+######  END OF POSITION 3 Q086
 ######
 ######  PLEASE ROTATE FOR POSITION 4
 ######
@@ -115,7 +117,7 @@ transon 2
 WAIT 12
 
 FILe:MKDIR workspace:acquisitions/2462622080002
-FILe:MKDIR workspace:acquisitions/2462622080002/P920
+FILe:MKDIR workspace:acquisitions/2462622080002/Q086
 fcmov 150
 cam:gain 55
 apmov 0
@@ -124,28 +126,29 @@ transoff
 
 ######
 ######  POSITION 4
-######  P Batch P920
+######  P Batch Q086
 ######
 drawclose
 exmov x3
 emmov m3
 wait 0.2
-capture 3,3 600 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P4_S01_T1_B3_M3_X3_E600_A0_G55.tiff False False
+capture 3,3 600 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P4_S01_T1_B3_M3_X3_E600_A0_G55.tiff False False
 wait 0.2
 exmov x2
 emmov m2
 wait 0.2
-capture 3,3 400 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P4_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
+capture 3,3 400 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P4_S01_T1_B3_M2_X2_E400_A0_G55.tiff False False
 wait 0.2
 exmov x1
 emmov m1
 wait 0.2
-capture 3,3 110 False None acquisitions:2462622080002/P920/2462622080002_P920_imagex1P4_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
+capture 3,3 110 False None acquisitions:2462622080002/Q086/2462622080002_Q086_imagex1P4_S01_T1_B3_M1_X1_E110_A0_G55.tiff False False
 wait 0.2
 ######
-######  END OF POSITION 4 P920
+######  END OF POSITION 4 Q086
 ######  AWAITING FOR NEW WHITE SCREEN
 ######
 drawopen
 transon 2
 StatusLED_OFF
+quit
