@@ -3,7 +3,7 @@ $iBright_Serial = "2462622080002"
 $fcmov_Value = "fcmov 150"
 $WST_Batch = "Q"
 $WST_Num = 201
-$New_WST_Num = ++$WST_Num
+$New_WST_Num = $WST_Num++
 $WST_Serial = ${WST_Batch} + ${WST_Num}
 $MKdir_WorkspaceAcquisitions = "FILe:MKDIR workspace:acquisitions"
 $ch1_exp = 110
@@ -185,17 +185,16 @@ $Putty_CaptureCh1P4
 wait 0.2
 `#`#`#`#`#`#
 `#`#`#`#`#`#  END OF POSITION 4 $WST_Serial
-`#`#`#`#`#`#  AWAITING FOR NEW WHITE SCREEN ${WST_Batch}${WST_Num}
+`#`#`#`#`#`#  AWAITING FOR NEW WHITE SCREEN ${WST_Batch}${New_WST_Num}
 `#`#`#`#`#`#
 drawopen
 transon 2
 StatusLED_OFF
 quit
 " > $OutFile
-
-(Get-Content $OutFile) |
-ForEach-Object { $_ -Replace '${WST_Num}', '${New_WST_Num}'} |
-Set-Content $OutFile
+Get-Content $OutFile |
+ForEach-Object { $_ -Replace $WST_Num, $New_WST_Num } |
+Set-Content -Force $OutFile 
 
 ((Get-Content $OutFile) -join "`n") + "`n" | Set-Content -NoNewline $OutFile
 Get-Content $OutFile | Set-Clipboard
