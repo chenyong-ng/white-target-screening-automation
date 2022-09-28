@@ -1,4 +1,3 @@
-#Clear-Variable -Name "Positsion"
 $iBright_Serial = "2462622080002"
 $fcmov_Value = "fcmov 150"
 $WST_Batch = "Q"
@@ -34,10 +33,13 @@ $Putty_CaptureCh1P4 = "$Capture_Bin3 $ch1_exp ${Acquisitions}:$iBright_Serial/$W
 $Putty_CaptureCh2P4 = "$Capture_Bin3 $ch2_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
 $Putty_CaptureCh3P4 = "$Capture_Bin3 $ch3_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
 
-Set-Location "C:\Users\chenyong.ng\OneDrive - Thermo Fisher Scientific\Desktop"
-
+$DesktopLeaf = Test-Path "$HOME\Desktop"
+if ([Bool]$DesktopLeaf -ne "True") {mkdir "$HOME\Desktop"}
+Set-Location "$HOME\Desktop"
 $OutFile = "whitescreen_automation-$iBright_Serial-$ch1_exp-$ch2_exp-$ch3_exp.txt"
+$OutFileLeaf = Test-Path -PathType Leaf $OutFile
 
+if ([Bool]$OutFileLeaf -ne "True") {
 Write-Output "
 clear
 telnet localhost 2323
@@ -192,9 +194,4 @@ transon 2
 StatusLED_OFF
 quit
 " > $OutFile
-Get-Content $OutFile |
-ForEach-Object { $_ -Replace $WST_Num, $New_WST_Num } |
-Set-Content -Force $OutFile 
-
-((Get-Content $OutFile) -join "`n") + "`n" | Set-Content -NoNewline $OutFile
-Get-Content $OutFile | Set-Clipboard
+}
