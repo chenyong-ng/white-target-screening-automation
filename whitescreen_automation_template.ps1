@@ -34,7 +34,7 @@ $Putty_CaptureCh1P4 = "$Capture_Bin3 $ch1_exp ${Acquisitions}:$iBright_Serial/$W
 $Putty_CaptureCh2P4 = "$Capture_Bin3 $ch2_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
 $Putty_CaptureCh3P4 = "$Capture_Bin3 $ch3_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
 
-Set-Location "C:\Users\chenyong.ng\OneDrive - Thermo Fisher Scientific\Desktop"
+Set-Location "%USERPROFILE%\Desktop"
 
 $OutFile = "whitescreen_automation-$iBright_Serial-$ch1_exp-$ch2_exp-$ch3_exp.txt"
 
