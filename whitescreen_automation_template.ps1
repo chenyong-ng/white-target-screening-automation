@@ -1,40 +1,44 @@
-#Clear-Variable -Name "Positsion"
-$iBright_Serial = "2462622080002"
+
+
+$DesktopLeaf = Test-Path "$HOME\Desktop"
+if ([Bool]$DesktopLeaf -ne "True") { mkdir "$HOME\Desktop" }
+Set-Location "$HOME\Desktop"
+
+. $PSScriptRoot\main.ps1
+
+$iBright_Serial = 2462622080002
 $fcmov_Value = "fcmov 150"
 $WST_Batch = "Q"
-$WST_Num = 201
-$New_WST_Num = $WST_Num++
-$WST_Serial = ${WST_Batch} + ${WST_Num}
+
+$WST_Serial = $WST_Batch + $WST_Num
 $MKdir_WorkspaceAcquisitions = "FILe:MKDIR workspace:acquisitions"
 $ch1_exp = 110
 $ch2_exp = 400
 $ch3_exp = 600
 
 $Capture_Bin3 = "capture 3,3"
-$Acquisitions = "False None acquisitions"
+$acquisitions = "False None acquisitions"
 
 $Pos1 = "P1"
 $Pos2 = "P2"
 $Pos3 = "P3"
 $Pos4 = "P4"
 
-$Putty_CaptureCh1P1 = "$Capture_Bin3 $ch1_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos1}_S01_T1_B3_M1_X1_E${ch1_exp}_A0_G55.tiff False False"
-$Putty_CaptureCh2P1 = "$Capture_Bin3 $ch2_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos1}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
-$Putty_CaptureCh3P1 = "$Capture_Bin3 $ch3_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos1}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh1P1 = "$Capture_Bin3 $ch0_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos1}_S01_T1_B3_M1_X1_E${ch1_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh2P1 = "$Capture_Bin3 $ch2_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos1}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh3P1 = "$Capture_Bin3 $ch3_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos1}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
 
-$Putty_CaptureCh1P2 = "$Capture_Bin3 $ch1_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos2}_S01_T1_B3_M1_X1_E${ch1_exp}_A0_G55.tiff False False"
-$Putty_CaptureCh2P2 = "$Capture_Bin3 $ch2_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos2}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
-$Putty_CaptureCh3P2 = "$Capture_Bin3 $ch3_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos2}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh1P2 = "$Capture_Bin3 $ch0_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos2}_S01_T1_B3_M1_X1_E${ch1_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh2P2 = "$Capture_Bin3 $ch2_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos2}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh3P2 = "$Capture_Bin3 $ch3_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos2}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
 
-$Putty_CaptureCh1P3 = "$Capture_Bin3 $ch1_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos3}_S01_T1_B3_M1_X1_E${ch1_exp}_A0_G55.tiff False False"
-$Putty_CaptureCh2P3 = "$Capture_Bin3 $ch2_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos3}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
-$Putty_CaptureCh3P3 = "$Capture_Bin3 $ch3_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos3}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh1P3 = "$Capture_Bin3 $ch0_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos3}_S01_T1_B3_M1_X1_E${ch1_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh2P3 = "$Capture_Bin3 $ch2_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos3}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh3P3 = "$Capture_Bin3 $ch3_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos3}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
 
-$Putty_CaptureCh1P4 = "$Capture_Bin3 $ch1_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M1_X1_E${ch1_exp}_A0_G55.tiff False False"
-$Putty_CaptureCh2P4 = "$Capture_Bin3 $ch2_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
-$Putty_CaptureCh3P4 = "$Capture_Bin3 $ch3_exp ${Acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
-
-Set-Location "%USERPROFILE%\Desktop"
+$Putty_CaptureCh1P4 = "$Capture_Bin3 $ch0_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M1_X1_E${ch1_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh2P4 = "$Capture_Bin3 $ch2_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M2_X2_E${ch2_exp}_A0_G55.tiff False False"
+$Putty_CaptureCh3P4 = "$Capture_Bin3 $ch3_exp ${acquisitions}:$iBright_Serial/$WST_Serial/${iBright_Serial}_${WST_Serial}_imagex1${Pos4}_S01_T1_B3_M3_X3_E${ch3_exp}_A0_G55.tiff False False"
 
 $OutFile = "whitescreen_automation-$iBright_Serial-$ch1_exp-$ch2_exp-$ch3_exp.txt"
 
@@ -81,7 +85,7 @@ wait 0.2
 `#`#`#`#`#`#
 drawopen
 transon 2
-WAIT 12
+WAIT 02
 
 $MKdir_WorkspaceAcquisitions/$iBright_Serial
 $MKdir_WorkspaceAcquisitions/$iBright_Serial/$WST_Serial
@@ -117,7 +121,7 @@ wait 0.2
 `#`#`#`#`#`#
 drawopen
 transon 2
-WAIT 12
+WAIT 02
 
 $MKdir_WorkspaceAcquisitions/$iBright_Serial
 $MKdir_WorkspaceAcquisitions/$iBright_Serial/$WST_Serial
@@ -153,7 +157,7 @@ wait 0.2
 `#`#`#`#`#`#
 drawopen
 transon 2
-WAIT 12
+WAIT 02
 
 $MKdir_WorkspaceAcquisitions/$iBright_Serial
 $MKdir_WorkspaceAcquisitions/$iBright_Serial/$WST_Serial
@@ -185,16 +189,13 @@ $Putty_CaptureCh1P4
 wait 0.2
 `#`#`#`#`#`#
 `#`#`#`#`#`#  END OF POSITION 4 $WST_Serial
-`#`#`#`#`#`#  AWAITING FOR NEW WHITE SCREEN ${WST_Batch}${New_WST_Num}
+`#`#`#`#`#`#  AWAITING FOR NEW WHITE SCREEN ${WST_Batch}
 `#`#`#`#`#`#
 drawopen
 transon 2
 StatusLED_OFF
-quit
+0uit
 " > $OutFile
-Get-Content $OutFile |
-ForEach-Object { $_ -Replace $WST_Num, $New_WST_Num } |
-Set-Content -Force $OutFile 
 
 ((Get-Content $OutFile) -join "`n") + "`n" | Set-Content -NoNewline $OutFile
 Get-Content $OutFile | Set-Clipboard
